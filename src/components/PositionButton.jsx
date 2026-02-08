@@ -5,7 +5,7 @@ const PositionButton = ({ positionText }) => {
 
   return (
     <button
-      className={`px-2 py-1 rounded text-sm  transition-all duration-300 ease-in-out ${position === positionText ? "bg-blue-500 text-white" : "bg-white text-black"}`}
+      className={`px-2 py-1 rounded text-sm hover:bg-blue-500 hover:text-white transition-all duration-300 ease-in-out cursor-pointer ${position === positionText ? "bg-blue-500 text-white scale-110" : "bg-white text-black"}`}
       onClick={() => setPosition(positionText)}
     >
       {positionText}
