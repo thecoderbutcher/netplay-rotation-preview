@@ -10,8 +10,15 @@ import Footer from "./components/Footer.jsx";
 
 export default function VolleyCourt() {
   const [index, setIndex] = useState(0);
-  const { mode, position, setPosition } = useRotationMode();
-  const players = rotations[index][mode];
+  const { mode, position } = useRotationMode();
+
+  const rotationOrder = [0, 5, 4, 3, 2, 1];
+  const rotationId = rotationOrder[index];
+  const players = rotations[rotationId][mode];
+
+  const handleRotate = () => {
+    setIndex((i) => (i + 1) % rotationOrder.length);
+  };
 
   return (
     <div className="min-h-screen flex flex-col items-center">
@@ -20,7 +27,7 @@ export default function VolleyCourt() {
         <div className="flex flex-col relative max-w-md w-[400px] h-[600px] bg-[url('./assets/images/court.webp')] bg-cover ">
           {/* Botones zona rival */}
           <h1 className="text-white text-center py-4 text-xl font-bold text-shadow-lg">
-            Rotación {index + 1}
+            Rotación {rotationId + 1}
           </h1>
           <div className="w-full flex justify-center gap-2">
             <ButtonOption mode="base" text="Base" />
@@ -28,8 +35,8 @@ export default function VolleyCourt() {
             <ButtonOption mode="recepcion" text="Recepción" />
             <ButtonOption mode="defensa" text="Defensa" />
             <button
-              onClick={() => setIndex((i) => (i + 1) % 6)}
-              className="bg-white px-2 py-1 rounded text-xs"
+              onClick={handleRotate}
+              className="bg-white px-2 py-1 rounded text-sm hover:bg-gray-700 hover:text-white transition-all duration-300 shadow-lg cursor-pointer"
             >
               Rotar
             </button>
