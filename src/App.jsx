@@ -7,6 +7,8 @@ import References from "./components/References.jsx";
 import { colors } from "../constants/colors.js";
 import PositionButton from "./components/PositionButton.jsx";
 import Footer from "./components/Footer.jsx";
+import { IoTriangle } from "react-icons/io5";
+import { FaCircle } from "react-icons/fa6";
 
 export default function VolleyCourt() {
   const [index, setIndex] = useState(0);
@@ -56,28 +58,43 @@ export default function VolleyCourt() {
               position === "Posición inicial"
                 ? player.initCoord.y
                 : player.finalCoord.y;
+
             return (
               <motion.div
                 key={player.pos}
                 transition={{ type: "spring", stiffness: 260, damping: 25 }}
-                className={`absolute w-10 h-10 rounded-full flex flex-col items-center justify-center text-white font-bold text-sm shadow-lg ${colors[player.id]} border-b border-gray-600`}
+                className={`absolute w-10 h-10 text-white font-bold text-sm`}
                 animate={{
                   left: x,
                   top: y,
                 }}
               >
-                <span className="text-shadow-gray-700 text-shadow-xs">
-                  {player.pos}
-                </span>
-                <span className="text-shadow-gray-700 text-shadow-xs">
-                  {player.id}
-                </span>
+                <div className="relative">
+                  <div className="absolute flex flex-col items-center justify-center top-4 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                    {player.pos >= 2 && player.pos <= 4 ? (
+                      <IoTriangle
+                        className={`${colors[player.id]} text-[50px] absolute z-0`}
+                      />
+                    ) : (
+                      <FaCircle
+                        className={`${colors[player.id]} text-[40px] absolute z-0`}
+                      />
+                    )}
+                    <span className="text-shadow-gray-700 text-shadow-xs z-10">
+                      {player.pos}
+                    </span>
+                    <span className="text-shadow-gray-700 text-shadow-xs z-10">
+                      {player.id}
+                    </span>
+                  </div>
+                </div>
               </motion.div>
             );
           })}
         </div>
         <References />
       </div>
+
       <Footer />
     </div>
   );

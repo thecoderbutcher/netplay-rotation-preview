@@ -74,7 +74,7 @@ export const rotations = [
       },
       {
         pos: 6,
-        id: "L",
+        id: "C1",
         initCoord: { x: "45%", y: "80%" },
         finalCoord: { x: "45%", y: "80%" },
       },
@@ -277,7 +277,7 @@ export const rotations = [
     recepcion: [
       {
         pos: 1,
-        id: "C1",
+        id: "L",
         initCoord: { x: "70%", y: "75%" },
         finalCoord: { x: "70%", y: "75%" },
       },
@@ -315,7 +315,7 @@ export const rotations = [
     defensa: [
       {
         pos: 1,
-        id: "C1",
+        id: "L",
         initCoord: { x: "25%", y: "80%" },
         finalCoord: { x: "25%", y: "80%" },
       },
@@ -419,7 +419,7 @@ export const rotations = [
       },
       {
         pos: 5,
-        id: "C2",
+        id: "L",
         initCoord: { x: "25%", y: "78%" },
         finalCoord: { x: "25%", y: "78%" },
       },
@@ -457,7 +457,7 @@ export const rotations = [
       },
       {
         pos: 5,
-        id: "C2",
+        id: "L",
         initCoord: { x: "36%", y: "81%" },
         finalCoord: { x: "36%", y: "81%" },
       },
@@ -495,7 +495,7 @@ export const rotations = [
       },
       {
         pos: 5,
-        id: "C2",
+        id: "L",
         initCoord: { x: "25%", y: "70%" },
         finalCoord: { x: "25%", y: "70%" },
       },
@@ -582,7 +582,7 @@ export const rotations = [
       },
       {
         pos: 6,
-        id: "C2",
+        id: "L",
         initCoord: { x: "45%", y: "75%" },
         finalCoord: { x: "30%", y: "75%" },
       },
@@ -620,7 +620,7 @@ export const rotations = [
       },
       {
         pos: 6,
-        id: "C2",
+        id: "L",
         initCoord: { x: "65%", y: "74%" },
         finalCoord: { x: "65%", y: "74%" },
       },
@@ -658,7 +658,7 @@ export const rotations = [
       },
       {
         pos: 6,
-        id: "C2",
+        id: "L",
         initCoord: { x: "32%", y: "78%" },
         finalCoord: { x: "32%", y: "78%" },
       },
@@ -747,7 +747,7 @@ export const rotations = [
     recepcion: [
       {
         pos: 1,
-        id: "C2",
+        id: "L",
         initCoord: { x: "70%", y: "78%" },
         finalCoord: { x: "70%", y: "78%" },
       },
@@ -785,7 +785,7 @@ export const rotations = [
     defensa: [
       {
         pos: 1,
-        id: "C2",
+        id: "L",
         initCoord: { x: "30%", y: "75%" },
         finalCoord: { x: "30%", y: "75%" },
       },
@@ -890,7 +890,7 @@ export const rotations = [
       },
       {
         pos: 5,
-        id: "C1",
+        id: "L",
         initCoord: { x: "20%", y: "80%" },
         finalCoord: { x: "20%", y: "80%" },
       },
@@ -928,7 +928,7 @@ export const rotations = [
       },
       {
         pos: 5,
-        id: "C1",
+        id: "L",
         initCoord: { x: "45%", y: "80%" },
         finalCoord: { x: "45%", y: "80%" },
       },
@@ -966,7 +966,7 @@ export const rotations = [
       },
       {
         pos: 5,
-        id: "C1",
+        id: "L",
         initCoord: { x: "25%", y: "75%" },
         finalCoord: { x: "25%", y: "75%" },
       },
